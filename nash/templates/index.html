@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payoff Matrix Game</title>
+</head>
+<body>
+  <form action="/" method="POST">
+    <label for="players">Number of players:</label>
+    <input type="number" id="players" name="players" min="2" required><br><br>
+
+    <div id="strategies-payoffs"></div>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    document.getElementById("players").oninput = function() {
+        // Get the number of players
+        var numPlayers = this.value;
+        // Create the input fields for the strategies and payoff matrices
+        var strategiesPayoffs = document.getElementById("strategies-payoffs");
+        strategiesPayoffs.innerHTML = "";
+        for (var i = 1; i <= numPlayers; i++) {
+            strategiesPayoffs.innerHTML += "<p>Player " + i + "</p>";
+            strategiesPayoffs.innerHTML += "<label for='strategies" + i + "'>Strategies:</label>";
+            strategiesPayoffs.innerHTML += "<input type='text' id='strategies" + i + "' name='strategies" + i + "' required><br><br>";
+            strategiesPayoffs.innerHTML += "<label>Payoff matrix:</label><br>";
+            for (var j = 1; j <= numPlayers; j++) {
+                strategiesPayoffs.innerHTML += "<label for='payoff" + i + j + "'>Player " + j + ":</label>";
+                strategiesPayoffs.innerHTML += "<input type='text' id='payoff" + i + j + "' name='payoff" + i + j + "' required><br>";
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Correlated Equilibrium</title>
+  </head>
+  <body>
+    <h1>Enter the payoff matrices:</h1>
+    <form action="/" method="post">
+      <table>
+        <tr>
+          <td>Payoff Matrix A:</td>
+          <td><textarea name="payoff_matrix_A" rows="5" cols="40"></textarea></td>
+        </tr>
+        <tr>
+          <td>Payoff Matrix B:</td>
+          <td><textarea name="payoff_matrix_B" rows="5" cols="40"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Submit"></td>
+        </tr>
+      </table>
+    </form>
+    {% if result %}
+    <div id="result">
+      <h1>Result:</h1>
+      <p>{{ result }}</p>
+    </div>
+    {% endif %}
+  </body>
+</html>

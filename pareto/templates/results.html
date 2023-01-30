@@ -1,0 +1,22 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pareto Efficiency Results</title>
+</head>
+<body>
+    <h1>Pareto Efficiency Results</h1>
+    <p>Total Utility: {{ total_utility }}</p>
+    <p>Land Allocation:</p>
+    <ul>
+        {% for person, allocation in allocation.items() %}
+            <li>{{ person }}: {{ allocation }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+
+
+
