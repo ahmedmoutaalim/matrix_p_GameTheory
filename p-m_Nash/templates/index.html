@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Matrix</title>
+</head>
+<body>
+  <h1>Enter Matrix</h1>
+  <form action="{{ url_for('result') }}" method="post">
+    <input type="hidden" name="strategy_choice" value="{{ strategy_choice }}">
+    Matrix: <input type="text" name="matrix"><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
